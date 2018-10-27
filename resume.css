@@ -1,3 +1,20 @@
 div{
-    background-color: sandybrown
+    background-color: sandybrown   
+} 
+.zwy-header{
+    background-color: lightblue;
+    height: 48%;
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+body{
+    margin:0;
+   
+}
+.zwy-body{
+    float: left;
+    width: 70%;
+    background-color: bisque;
+    height: 100%;
 }
