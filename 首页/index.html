@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>小组介绍</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Google Fonts --->
+<link href='http://fonts.useso.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+<!-- Google Fonts --->
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>
+	<script type="text/javascript" src="js/easing.js"></script>
+					<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$(".scroll").click(function(event){		
+							event.preventDefault();
+							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+						});
+					});
+</script>
+</head>
+<body>
+	<!--- Header Starts Here ---->
+	<div class="header" id="home">
+		<div class="container">
+			<div class="logos">
+				<a href="index.html"><img src="images/logo.jpg" alt=""></a>
+			</div>
+			<!--- banner Slider starts Here --->
+	  			<script src="js/responsiveslides.min.js"></script>
+					 <script>
+					    // You can also use "$(window).load(function() {"
+					    $(function () {
+					      // Slideshow 4
+					      $("#slider4").responsiveSlides({
+					        auto: true,
+					        pager: true,
+					        nav: true,
+					        speed: 500,
+					        namespace: "callbacks",
+					        before: function () {
+					          $('.events').append("<li>before event fired.</li>");
+					        },
+					        after: function () {
+					          $('.events').append("<li>after event fired.</li>");
+					        }
+					      });
+					
+					    });
+					  </script>
+			<!----//End-slider-script---->
+			<!-- Slideshow 4 -->
+			    <div  id="top" class="callbacks_container">
+			      <ul class="rslides" id="slider4">
+			        <li>
+			        	<div class="slide-content">
+							<h2>此为我们小组的主页</h2>
+						</div>
+					 </li>
+					 <li>
+			        	<div class="slide-content">
+							<h2>成员有：xxx，xxx，xxx，xxx</h2>
+						</div>
+					</li>
+			      </ul>
+			    </div>
+		</div>
+	</div>
+	<!--- Header Ends Here ---->
+	<!-- Navigation Starts Here ---->
+	<!-- top-nav -->
+
+		<script src="js/myscript.js"> </script>
+		<!-- top-nav -->
+	<!--- Navigarion Ends Here --->
+	<!--- About Us Starts Here ---->
+	<div class="about" id="about">
+		<div class="container">
+			<h3 class="top-title">项目一</h3>
+			<div class="row about-row">
+				<div class="col-md-3 about-row-column">
+					<a href="https://zwymiao.github.io/"><img src="images/men-a.jpg" /></a>
+				</div>
+				<div class="col-md-9 about-column">
+					<h3>曾文彦</h3>
+					<p>运用了HTML，CSS，J </p>
+					<h5>Skills</h5>
+					<div id="progressbar"><div id="progress" ><div id="pbaranim">11%</div></div></div>
+					<ul class="social">
+						<li><i class="fa"></i></li>
+						<li><i class="tw"></i></li>
+						<li><i class="in"></i></li>
+						<li><i class="pw"></i></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="row about-row">
+				<div class="col-md-9 about-column">
+					<h3>Jon Doe</h3>
+					<h4>Subtitle</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </p>
+					<h5>Skills</h5>
+					<div id="progressbar"><div id="progress" ><div id="pbaranim">11%</div></div></div>
+					<ul class="social">
+						<li><i class="fa"></i></li>
+						<li><i class="tw"></i></li>
+						<li><i class="in"></i></li>
+						<li><i class="pw"></i></li>
+					</ul>
+				</div>
+				<div class="col-md-3 about-row-column">
+					<img src="images/men-b.jpg" alt=""/>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="row about-row">
+				<div class="col-md-3 about-row-column">
+					<img src="images/men-c.gif" alt=""/>
+				</div>
+				<div class="col-md-9 about-column">
+					<h3>李书妍</h3>
+					<p>运用HTML、CSS，使用Adobe Dreamweaver制作</p>
+					<h5>Skills</h5>
+					<div id="progressbar"><div id="progress" ><div id="pbaranim">11%</div></div></div>
+					<ul class="social">
+						<li><i class="fa"></i></li>
+						<li><i class="tw"></i></li>
+						<li><i class="in"></i></li>
+						<li><i class="pw"></i></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="row about-row">
+				<div class="col-md-9 about-column">
+					<h3>Jon Doe</h3>
+					<h4>Subtitle</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </p>
+					<h5>Skills</h5>
+					<div id="progressbar"><div id="progress" ><div id="pbaranim">11%</div></div></div>
+					<ul class="social">
+						<li><i class="fa"></i></li>
+						<li><i class="tw"></i></li>
+						<li><i class="in"></i></li>
+						<li><i class="pw"></i></li>
+					</ul>
+				</div>
+				<div class="col-md-3 about-row-column">
+					<img src="images/men-b.jpg" alt=""/>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!--- Testimonial Starts here --->
+			<div class="testimonial">
+					<h3 class="top-title">项目二</h3>
+					<script>
+					    // You can also use "$(window).load(function() {"
+					    $(function () {
+					      // Slideshow 4
+					      $("#slider2").responsiveSlides({
+					        auto: true,
+					        pager: true,
+					        nav: true,
+					        speed: 500,
+					        namespace: "callbacks",
+					        before: function () {
+					          $('.events').append("<li>before event fired.</li>");
+					        },
+					        after: function () {
+					          $('.events').append("<li>after event fired.</li>");
+					        }
+					      });
+					
+					    });
+					  </script>
+					<div  id="top" class="callbacks_container">
+			      		<ul class="rslides" id="slider2">
+			        		<li>
+								<div class="testimonial-slide">
+									<blockquote class="style1">
+										<span></span>
+									</blockquote>
+									<h3>教务系统：</h3>
+									<h4>使用到的技术：使用MySQL、html、jQuery</h4>
+									<h4>打算做成的样子：</h4>
+								</div>
+						</ul>
+					</div>
+			</div>
+			<!--- Testimonial Ends here --->
+		</div>
+	</div>
+	<!--- About Us Ends Here ---->
+	<!--- Footer Starts here -->
+	<div class="footer">
+		<ul class="footer-icons">
+			<li><i class="fb"></i></li>
+			<li><i class="twit"></i></li>
+		</ul>
+		<p class="copyright">Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+				<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+	</div>
+	<!--- Footer Ends here --->
+</body>
+</html>
